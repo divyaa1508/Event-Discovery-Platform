@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Bookings - EventHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <h2>Event<span>Hub</span></h2>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#events">Events</a>
+            <a href="index.html#booking">Book Event</a>
+            <a href="bookings.html">Manage Bookings</a>
+        </nav>
+    </div>
+</header>
+
+<section class="management-section container">
+    <h1>Booking Management</h1>
+    <p>View, search, confirm and cancel customer bookings.</p>
+
+    <div class="search-row">
+        <input
+            type="search"
+            id="searchInput"
+            placeholder="Search by customer name or email"
+        >
+        <button class="btn" id="searchButton">Search</button>
+        <button class="btn secondary-btn" id="showAllButton">Show All</button>
+    </div>
+
+    <div id="managementMessage" class="message"></div>
+
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer</th>
+                    <th>Email</th>
+                    <th>Event</th>
+                    <th>Tickets</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="bookingTableBody">
+                <tr>
+                    <td colspan="8">Loading bookings...</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 EventHub. All Rights Reserved.</p>
+</footer>
+
+<script src="bookings.js"></script>
+</body>
+</html>

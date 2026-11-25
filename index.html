@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Discovery Platform</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container nav">
+        <h2>Event<span>Hub</span></h2>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#events">Events</a>
+            <a href="#booking">Book Event</a>
+            <a href="bookings.html">Manage Bookings</a>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>Discover Amazing Events</h1>
+        <p>Find events, explore experiences and book your tickets.</p>
+        <a href="#events" class="btn">Explore Events</a>
+    </div>
+</section>
+
+<section class="section container" id="events">
+    <h2 class="section-title">Upcoming Events</h2>
+    <p class="section-description">Explore events available in our database.</p>
+
+    <div id="eventMessage"></div>
+    <div class="event-grid" id="eventGrid">
+        <p>Loading events...</p>
+    </div>
+</section>
+
+<section class="section booking-section" id="booking">
+    <div class="container">
+        <h2 class="section-title">Book Your Event</h2>
+        <p class="section-description">Fill in your details to submit a booking.</p>
+
+        <form id="bookingForm" class="booking-form">
+            <div class="form-group">
+                <label for="customer_name">Customer Name</label>
+                <input
+                    type="text"
+                    id="customer_name"
+                    name="customer_name"
+                    placeholder="Enter your name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="event_id">Select Event</label>
+                <select name="event_id" id="event_id" required>
+                <option value="">Select Event</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="ticket_quantity">Ticket Quantity</label>
+                <input
+                    type="number"
+                    id="ticket_quantity"
+                    name="ticket_quantity"
+                    min="1"
+                    max="20"
+                    value="1"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn submit-btn" id="bookingButton">
+                Submit Booking
+            </button>
+
+            <div id="bookingMessage" class="message"></div>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <p>© 2026 EventHub. All Rights Reserved.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
